@@ -1,0 +1,169 @@
+@media screen and (min-width:1440px) and (max-width:2560px) {
+    .nav-middle-link {
+        display: none;
+    }
+}
+
+@media screen and (min-width:765px) and (max-width:1440px) {
+    .nav-links {
+        display: flex;
+        width: fit-content;
+    }
+
+    .nav-links li a {
+        padding: 0.7vw;
+    }
+
+    .nav-middle-link {
+        display: none;
+    }
+
+    header {
+        padding: 1vh 1vw;
+    }
+
+    .header-right {
+        margin-right: 5%;
+    }
+
+    .foot div h2 {
+        font-size: 1.5rem;
+    }
+
+    .foot div p {
+        font-size: 1.5rem;
+    }
+
+    .aucontainer {
+        width: 60vw;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 5vh;
+    }
+
+    .grid .box .img img {
+        height: 25vh;
+        width: 40vw;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 5vw;
+        grid-row-gap: 5vh;
+        margin-top: 5vh;
+    }
+
+    .services .box {
+        width: calc(41vw - 2vw);
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
+
+    .head {
+        font-size: 2rem;
+        width: 80vw;
+    }
+
+    .head .tagline {
+        font-size: 1.5rem;
+    }
+
+    .foot div h2 {
+        font-size: 1.5rem;
+    }
+
+    .foot div p {
+        font-size: 1rem;
+    }
+
+    .aucontainer {
+        width: 85vw;
+    }
+
+    .aucontainer .auhead {
+        font-size: 2rem;
+    }
+
+    .aucontent {
+        max-height: 40vh;
+    }
+
+    .section#gallery {
+        min-height: 150vh;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .gallery-container .gallery-img img {
+        width: 40vw;
+        height: 22vh;
+    }
+
+    .section#events {
+        min-height: 150vh;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .grid .box .img img {
+        height: 20vh;
+        width: 90vw;
+    }
+
+    .section#services {
+        min-height: 150vh;
+    }
+
+    .services-h1 {
+        margin-top: 8vh;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3vh;
+        margin-top: 5vh;
+        left: 25%;
+    }
+
+    .services .box {
+        width: 60vw;
+    }
+
+    .contact-box {
+        top: 5%;
+    }
+
+    .contact-links h2 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        top: 15%;
+    }
+
+    .footer .foot-box {
+        padding: 0.8%;
+        width: 60vw;
+        margin-top: 2%;
+    }
+}

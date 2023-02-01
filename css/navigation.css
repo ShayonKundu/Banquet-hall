@@ -1,0 +1,113 @@
+header {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    padding: 0 1vw;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 6vh;
+    background-color: teal;
+    font-family: sans-serif;
+    z-index: 1;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1vh 2vw;
+}
+
+.heading h4 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.heading p {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links {
+    display: flex;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1vh 2vw;
+}
+
+.nav-links li a:hover {
+    background-color: seagreen;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 35rem;
+    height: 100%;
+    z-index: 10;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.5, 0, 0, 0.75);
+}
+
+.nav.is--active {
+    transform: translateX(0%);
+}
+
+.nav ul {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav ul li {
+    width: 100%;
+    padding: 1.2rem 0;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: 1.2rem;
+    list-style-type: none;
+    transition: background 0.33s ease;
+}
+
+.nav-link {
+    color: #393c41;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.nav ul li:hover {
+    background: teal;
+}
+
+.close-btn {
+    text-align: right;
+    margin: 2rem 3rem;
+}
+
+.nav-close-btn {
+    width: 3rem;
+    cursor: pointer;
+}

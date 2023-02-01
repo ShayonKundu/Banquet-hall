@@ -1,0 +1,509 @@
+.section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.section#home {
+  background-image: url(../media/home.jpg);
+  height: 100vh;
+}
+
+.section#aboutus {
+  background-image: url(../media/aboutus.jpg);
+  height: 100vh;
+}
+
+.section#gallery {
+  background-color: #000;
+  height: 100vh;
+}
+
+.section#events {
+  background-color: #000;
+  height: 100vh;
+}
+
+.section#services {
+  background-color: #000;
+  height: 100vh;
+}
+
+.section#contactus {
+  background-color: #000;
+  height: 100vh;
+}
+
+/* Page 1 design starts */
+
+.head {
+  font-family: eczar;
+  color: black;
+  font-weight: bolder;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: wheat;
+  border: 2px dotted black;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+}
+
+.head .tagline {
+  font-size: 2rem;
+}
+
+.foot {
+  display: flex;
+  background-color: white;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  width: 100vw;
+  min-height: 10vh;
+  bottom: 0%;
+  left: 0%;
+}
+
+.foot div {
+  display: grid;
+  height: 8vh;
+  width: calc(90vw/5);
+  border: 2px solid black;
+  place-items: center;
+}
+
+.foot div h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: black;
+}
+
+.foot div p {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(202, 157, 90);
+}
+
+/* numeric animations */
+@property --num {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.foot div h2.f1::before {
+  counter-reset: my-counter var(--num);
+  content: counter(my-counter);
+  animation: count1 5s ease-in-out forwards;
+}
+
+@keyframes count1 {
+  to {
+    --num: 10;
+  }
+}
+
+.foot div h2.f2::before {
+  counter-reset: my-counter var(--num);
+  content: counter(my-counter);
+  animation: count2 5s ease-in-out forwards;
+}
+
+@keyframes count2 {
+  to {
+    --num: 7500;
+  }
+}
+
+.foot div h2.f3::before {
+  counter-reset: my-counter var(--num);
+  content: counter(my-counter);
+  animation: count3 5s ease-in-out forwards;
+}
+
+@keyframes count3 {
+  to {
+    --num: 1000;
+  }
+}
+
+.foot div h2.f4::before {
+  counter-reset: my-counter var(--num);
+  content: counter(my-counter);
+  animation: count4 5s ease-in-out forwards;
+}
+
+@keyframes count4 {
+  to {
+    --num: 45000;
+  }
+}
+
+/* Page 1 design ends*/
+
+/* Page 2 design starts */
+
+.aucontainer {
+  position: relative;
+  height: 60vh;
+  width: 40vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 20%;
+  bottom: 20%;
+  border-radius: 50px;
+}
+
+.aucontainer.active {
+  transform: translateX(0%);
+  animation: slide 0.5s forwards ease-in-out;
+}
+
+@keyframes slide {
+  100% {
+    transform: translateX(10%);
+    transition: transform 0.5s cubic-bezier(0.5, 0, 0, 0.75);
+  }
+}
+
+.auhead {
+  position: relative;
+  top: 10%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.aucontent {
+  position: relative;
+  overflow: auto;
+  max-height: 35vh;
+  top: 15%;
+  padding: 0 5% 5% 5%;
+  text-align: start;
+  font-size: 2rem;
+  margin: 0 5% 5% 5%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+/* Page 2 design ends*/
+
+/* Page 3 design starts */
+.gallery-container {
+  display: grid;
+  margin-top: 7vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 2vw;
+  grid-row-gap: 1vh;
+  margin-left: 6vw;
+}
+
+.gallery-container .gallery-img img {
+  border: 3px solid black;
+  width: 25vw;
+  height: 22vh;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.gallery-container .gallery-img img:hover {
+  transform: scale(0.9);
+}
+
+/* Page 4 design starts */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 5vh;
+  margin: 5% 0 0 5%;
+}
+
+.grid .box {
+  position: relative;
+}
+
+.grid .box .img {
+  max-width: 100%;
+  transition: all 0.3s;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+}
+
+.grid .box .img img {
+  border: 3px solid white;
+  height: 330px;
+  width: 500px;
+}
+
+.grid .box .img:hover {
+  transform: scale(1.1);
+}
+
+.grid .box .content {
+  position: absolute;
+  text-align: center;
+  bottom: 0%;
+  left: 40%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  width: 60%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.grid .box:hover .content {
+  background-color: black;
+  bottom: 0%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.grid .box .content h3 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Page 4 design ends*/
+
+/* Page 5 design starts */
+
+/* Services designs */
+.services-h1 {
+  margin-top: 18vh;
+}
+
+.services {
+  position: relative;
+  left: 8vw;
+  display: flex;
+  width: 84vw;
+  height: 30vh;
+  margin-top: 25vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.services .box {
+  width: calc(21vw - 2vw);
+  height: 30vh;
+  background: #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.services .box .icon {
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: teal;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.services .box:hover .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.services .box .icon .fa {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.services .box:hover .icon .fa {
+  font-size: 40px;
+}
+
+.services .box .box-content {
+  top: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.services .box:hover .box-content {
+  top: 100px;
+  opacity: 1;
+  color: #fff;
+}
+
+.services .box .box-content h3 {
+  margin: 0 0 10px;
+  font-size: 3rem;
+}
+
+.services .box .box-content p {
+  font-size: 2rem;
+}
+
+
+/* Contact us page */
+.contact-box {
+  position: relative;
+  top: 15%;
+  width: clamp(100px, 90%, 1000px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-links,
+.contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+.contact-links {
+  background-color: #1f2e43;
+  background:
+    radial-gradient(circle at 55% 92%, #426691 0 12%, transparent 12.2%),
+    radial-gradient(circle at 94% 72%, #426691 0 10%, transparent 10.2%),
+    radial-gradient(circle at 20% max(78%, 350px), #263a53 0 7%, transparent 7.2%),
+    radial-gradient(circle at 0% 0%, #263a53 0 40%, transparent 40.2%),
+    #1f2e43;
+  border-radius: 10px 0 0 10px;
+}
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+}
+
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.form-item {
+  position: relative;
+}
+
+label,
+input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label,
+input:valid+label,
+textarea:focus+label,
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #fd917e;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 5%;
+  top: 25%;
+}
+
+.footer .foot-box {
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 20vw;
+  margin-right: 10%;
+  background: #ccc;
+}
+
+.footer .foot-box li a {
+  color: #000;
+  text-decoration: none;
+}
