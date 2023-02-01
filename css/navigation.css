@@ -102,6 +102,10 @@ header {
     background: teal;
 }
 
+.nav ul li:hover a {
+    color: #fff;
+}
+
 .close-btn {
     text-align: right;
     margin: 2rem 3rem;
