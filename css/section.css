@@ -500,10 +500,11 @@ textarea:valid+label {
   font-size: 1.5rem;
   width: 20vw;
   margin-right: 10%;
-  background: #ccc;
+  background: teal;
+  color: #fff;
 }
 
 .footer .foot-box li a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
